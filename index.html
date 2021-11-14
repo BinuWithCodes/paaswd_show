@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Show/Hide Password</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <style>
+       {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+   }
+   body {
+    background: white
+   }
+   .container {
+    width: 400px;
+    height: 470px;
+    margin: 30px auto 0;
+    padding-top: 50px;
+    background: cornsilk;
+    border-radius: 5px;
+    border: 5px solid black;
+    color: black;
+   }
+   .container>div {
+    width: 100%;
+    height: 25%;
+    text-align: center;
+   }
+   .container .title {
+    display: block;
+    font-size: 30px;
+    font-family: sans-serif;
+    height: 30px;
+    padding-bottom: 80px;
+   }
+   .container>div input[type='password'],
+   input[type='text'] {
+    width: 65%;
+    height: 45px;
+    background: cornsilk;
+    margin: -30px auto 0;
+    padding: 5px 40px 5px 10px;
+    display: block;
+    font-size: 22px;
+    font-family: sans-serif;
+    border: 2px solid black;
+    outline: nfirst;
+    border-radius: 3px;
+    color: black;
+   }
+   .container>div .group {
+    display: block;
+    height: 40px;
+    text-align: left;
+    padding-left: 70px;
+    padding-top: 10px;
+    font: 17px sans-serif, bold;
+    position: relative;
+   }
+   .container>div .group .label {
+    position: absolute;
+    bottom: 11px;
+    left: 88px;
+    padding-top: 10px;
+   }
+   .container>div .group input[type='checkbox'] {
+    width: 13px;
+    height: 30px;
+    cursor: pointer
+   }
+   .title{
+       margin-top: 100px;
+
+   }
+  </style>
+
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="title">enter your Password</div>
+       
+        <div class="first">
+         <input type="password" id="passwd">
+           <div class="group">
+             <input type="checkbox" id="check">
+             <label id="showhide" class="label">Show Password</label>
+           </div>
+        </div>
+        <script>
+            var inputPass = document.getElementById('passwd'),
+                  inputCheck  = document.getElementById('check'),
+                  label = document.getElementById('showhide');
+      
+      
+                  inputCheck.onclick = function () {
+      
+                  if(inputCheck.checked) {
+      
+                      inputPass.setAttribute('type', 'text');
+                      label.textContent = 'Hide Passowrd';
+                  } else {
+      
+                      inputPass.setAttribute('type', 'password');
+                      label.textContent = 'Show Passowrd';
+                  }
+      
+                  }
+      
+      
+        </script>
+      
+
+ 
+</body>
+</html>
